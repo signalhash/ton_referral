@@ -108,7 +108,7 @@ contract SignalHash_Referral with Ownable {
 
     get fun get_contract_metadata(): Cell {
         return beginCell()
-                .storeSlice("https://yourcdn.com/signalhash-ref.json".asSlice())
+                .storeSlice("https://contracts.signalhash.io/public/signalhash-ref.json".asSlice())
                 .endCell();
     }
 }
