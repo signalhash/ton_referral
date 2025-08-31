@@ -1,0 +1,19 @@
+{
+  "projects": [
+    {
+      "name": "referral",
+      "path": "./sources/referral.tact",
+      "output": "./sources/output",
+      "mode": "full",
+      "options": {
+        "external": false,
+        "debug": false,
+        "ipfsAbiGetter": false,
+        "interfacesGetter": false,
+        "experimental": {
+          "inline": false
+        }
+      }
+    }
+  ]
+}

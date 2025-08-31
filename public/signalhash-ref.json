@@ -1,0 +1,12 @@
+{
+  "name": "SignalHash Referral",
+  "description": "Referral smart contract for SignalHash mini-game",
+  "image": "https://yourcdn.com/logo.png",
+  "symbol": "SGHASHREF",
+  "decimals": 9,
+  "websites": ["https://t.me/signalhash_bot?start", "https://signalhash.io/"],
+  "social_links": {
+    "telegram": "https://t.me/signalhash_community",
+    "twitter": "https://x.com/signalhash"
+  }
+}
