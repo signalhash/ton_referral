@@ -7,9 +7,10 @@ import { prepareTactDeployment } from "@tact-lang/deployer";
 
 dotenv.config();
 
+const NETWORK = (process.env.NETWORK || "testnet") as "testnet" | "mainnet";
+
 (async (): Promise<void> => {
 
-    let testnet = (process.env.TESTNET ?? "true") == "true";
     let packageName = "referral_SignalHash_Referral.pkg";
     let owner = Address.parse(process.env.OWNER_ADDRESS ?? '');
     let merchant = Address.parse(process.env.MERCHANT_ADDRESS ?? '');
@@ -22,14 +23,14 @@ dotenv.config();
 
     // Prepareing
     console.log("Uploading package...");
-    let prepare = await prepareTactDeployment({ pkg, data, testnet });
+    let prepare = await prepareTactDeployment({ pkg, data, testnet: NETWORK == "testnet" });
 
     // Deploying
     console.log("============================================================================================");
     console.log("Contract Address");
     console.log("============================================================================================");
     console.log();
-    console.log(address.toString({ testOnly: testnet }));
+    console.log(address.toString({ testOnly: NETWORK == "testnet"  }));
     console.log();
     console.log("============================================================================================");
     console.log("Please, follow deployment link");
