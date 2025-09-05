@@ -38,7 +38,8 @@ async function openV5(client: TonClient): Promise<{
 
     const w = client.open(
         WalletContractV5R1.create({
-            walletId: { networkGlobalId: NETWORK == "testnet" ?  -3: -257 },
+            workchain: 0,
+            //walletId: { networkGlobalId: NETWORK == "testnet" ?  -3: -257 },
             publicKey: key.publicKey,
         })
     );

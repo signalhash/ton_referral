@@ -11,6 +11,7 @@
     "lint": "prettier --check ./sources && tact-fmt --check ./sources && yarn misti --min-severity medium ./tact.config.json",
     "test": "npm run build && jest",
     "deploy": "npm run test && ts-node ./sources/referral.deploy.ts",
+    "set-min": "ts-node ./sources/referral.live.ts set-reserve --min 0.2 --pay 0.25",
     "read": "ts-node ./sources/contract.read.ts"
   },
   "dependencies": {
